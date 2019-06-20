@@ -30,6 +30,10 @@ li {
   border-bottom: 4px solid #E6E673;
 }
 
+.paperboy-details {
+  padding: 10px 25px;
+}
+
 .summary {
   padding: 25px 40px;
   font-size: 1.25em;

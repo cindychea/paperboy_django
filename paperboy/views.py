@@ -1,5 +1,5 @@
 from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from paperboy.models import Paperboy
 
 def home(request):
@@ -13,3 +13,7 @@ def deliver(request, id):
     ad2 = request.POST['address2']
     pb.deliver(int(ad1), int(ad2))
     return HttpResponseRedirect('/')
+
+def show(request, id):
+    pb = get_object_or_404(Paperboy, id=id)
+    return render(request, 'show.html', {'paperboy': pb})

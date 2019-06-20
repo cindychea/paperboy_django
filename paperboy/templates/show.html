@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+    <section class="paperboy-details">
+        <h2>{{ paperboy.name }}</h2>
+        <p>Experience: {{ paperboy.experience }} papers delivered</p>
+        <p>Earnings: {{ paperboy.earnings }}</p>
+    </section>
+{% endblock %}
